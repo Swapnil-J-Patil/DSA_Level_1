@@ -36,7 +36,7 @@ public class ArrayListInput {
         list.addAll(list2);
         System.out.println(list.equals(list2));
 
-        System.out.println(list.getFirst());    //To get first element of the list
+        //System.out.println(list.getFirst());    //To get first element of the list
         System.out.println(list);
 
         System.out.println(list.subList(1, 3));
