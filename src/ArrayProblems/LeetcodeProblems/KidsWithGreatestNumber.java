@@ -14,7 +14,7 @@ public class KidsWithGreatestNumber {
     }
     public static List<Boolean> greatestNum(int[] arr, int extra)
     {
-        int max=Arrays.stream(arr).max().getAsInt();
+        int max=getMaxElement(arr);
         List<Boolean> ans=new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
             if(arr[i]+extra >= max)
@@ -28,5 +28,15 @@ public class KidsWithGreatestNumber {
         }
         return ans;
     }
-
+    public static int getMaxElement(int[] arr)
+    {
+        int max=arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i]>max)
+            {
+                max=arr[i];
+            }
+        }
+        return max;
+    }
 }

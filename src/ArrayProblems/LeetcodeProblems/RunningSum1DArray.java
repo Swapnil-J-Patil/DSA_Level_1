@@ -17,7 +17,7 @@ public class RunningSum1DArray {
             return arr;
         }
         for (int i = 1; i < arr.length; i++) {
-            int sum=arr[i-1]+arr[i];    //use this when you want to edit same array while keeping track of array values(Instead of creating another array)
+            int sum=arr[i-1]+arr[i];
             arr[i]=sum;
         }
         return arr;
