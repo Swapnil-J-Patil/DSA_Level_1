@@ -12,6 +12,7 @@ public class PangramSentence {
     }
     public static boolean checkIfPangramOptimized(String sentence) {
         for (char letter ='a'; letter <='z'; letter++){
+            //Check if the string contains letter using indexOf method
             if (sentence.indexOf(letter) == -1 ){
 
                 return false;
