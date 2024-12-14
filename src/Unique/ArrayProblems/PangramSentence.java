@@ -4,6 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 //1832. Check if the Sentence Is Pangram
+
+/*Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+        Output: true
+        Explanation: sentence contains at least one of every letter of the English alphabet.*/
 public class PangramSentence {
     public static void main(String[] args) {
         System.out.println(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"));

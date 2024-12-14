@@ -1,52 +1,25 @@
 package Unique.ArrayProblems;
 
+//1512. Number of Good Pairs
+/*
+Input: nums = [1,2,3,1,1,3]
+        Output: 4
+        Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.*/
 public class NumberOfGoodPairs {
     public static void main(String[] args) {
 
-        int[] arr={1,2,3,1,1,3};
+        int[] arr = {1, 2, 3, 1, 1, 3};
         System.out.println(numberOfGoodPairs(arr));
         System.out.println(numIdenticalPairs(arr));
 
 
     }
+
     public static int numIdenticalPairs(int[] arr) {
         int ans = 0, count[] = new int[101]; //count will have {0,0,0,0, .....0} and we will keep on updating it to get no of occurrences of each element
-        for (int a: arr) {
-            ans = ans + count[a]++;
-        }
-        return ans;
-    }
-
-    //BruteForce
-    public static int numberOfGoodPairs(int[] arr)
-    {
-
-        int fast=1;
-        int slow=0;
-        int ans=0;
-        while (slow<arr.length-1)
-        {
-            if(arr[slow]==arr[fast])
-            {
-                if(fast!=arr.length-1) {
-                    ans++;
-                    fast++;
-                }
-                else
-                {
-                    ans++;
-                    slow++;
-                    fast=slow+1;
-                }
-            }
-            else if(fast== arr.length-1)
-            {
-                slow++;
-                fast=slow+1;
-            }
-            else {
-                fast++;
-            }
+        for (int a : arr) {
+            ans = ans + count[a];
+            count[a]++;
         }
         return ans;
     }
@@ -77,4 +50,32 @@ Step | a (Current Element) | cnt[a] (Before Increment) | Increment to ans | New 
     For each element a, ans is incremented by the current value of cnt[a], which represents the count of previous occurrences of a.
     This works because each previous occurrence of a forms a "good pair" with the current a.
     */
+
+    //BruteForce
+    public static int numberOfGoodPairs(int[] arr) {
+
+        int fast = 1;
+        int slow = 0;
+        int ans = 0;
+        while (slow < arr.length - 1) {
+            if (arr[slow] == arr[fast]) {
+                if (fast != arr.length - 1) {
+                    ans++;
+                    fast++;
+                } else {
+                    ans++;
+                    slow++;
+                    fast = slow + 1;
+                }
+            } else if (fast == arr.length - 1) {
+                slow++;
+                fast = slow + 1;
+            } else {
+                fast++;
+            }
+        }
+        return ans;
+    }
 }
+
+

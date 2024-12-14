@@ -1,4 +1,4 @@
-package ArrayProblems;
+package ArrayProblems.Basics;
 
 public class MaxElement {
     public static void main(String[] args) {

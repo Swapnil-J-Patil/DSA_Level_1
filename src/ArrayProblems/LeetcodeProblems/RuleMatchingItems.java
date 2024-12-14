@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//1773. Count Items Matching a Rule
+
+/*Example 1:
+
+        Input: items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], ruleKey = "color", ruleValue = "silver"
+        Output: 1
+        Explanation: There is only one item matching the given rule, which is ["computer","silver","lenovo"].*/
+
 public class RuleMatchingItems {
     public static void main(String[] args) {
         List<List<String>> list=new ArrayList<>();
