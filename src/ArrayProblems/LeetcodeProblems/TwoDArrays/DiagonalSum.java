@@ -37,7 +37,7 @@ public class DiagonalSum {
             if(mat.length % 2 == 1)
             {
                 int middle=(mat.length- 1)/2;
-                return sum -mat[middle][middle];
+                return sum - mat[middle][middle];
             }
         }
         return sum;
