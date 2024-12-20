@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems.TwoDArrays;
+package Unique.ArrayProblems.TwoDArray;
 
 //1252. Cells with Odd Values in a Matrix
 
