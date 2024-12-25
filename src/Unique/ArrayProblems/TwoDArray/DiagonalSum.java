@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems.TwoDArrays;
+package Unique.ArrayProblems.TwoDArray;
 
 //1572. Matrix Diagonal Sum
 
