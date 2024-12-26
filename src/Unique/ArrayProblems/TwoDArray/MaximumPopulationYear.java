@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems;
+package Unique.ArrayProblems.TwoDArray;
 
 //1854. Maximum Population Year
 
@@ -20,27 +20,33 @@ The earlier year between them is 1960.*/
 public class MaximumPopulationYear {
     public static void main(String[] args) {
 
+        int[][] arr={
+                {1950,1961},
+                {1960,1971},
+                {1970,1981}
+        };
+        System.out.println(maximumPopulation(arr));
     }
-    public int maximumPopulation(int[][] logs) {
-        int[] count = new int[101];
+    public static int maximumPopulation(int[][] logs) {
+        int[] populationCount = new int[101];
 
         for(int[] l: logs){
             int birth = l[0];
             int death = l[1];
 
-            count[birth - 1950]++;
-            count[death - 1950]--;
+            populationCount[birth - 1950]++;
+            populationCount[death - 1950]--;
 
         }
 
-        int max = count[0];
+        int max = populationCount[0];
         int year = 1950;
 
-        for(int i =1; i< count.length; i++){
-            count[i] += count[i - 1];
+        for(int i =1; i< populationCount.length; i++){
+            populationCount[i] += populationCount[i - 1];
 
-            if(count[i] > max){
-                max = count[i];
+            if(populationCount[i] > max){
+                max = populationCount[i];
                 year = 1950 + i;
             }
         }

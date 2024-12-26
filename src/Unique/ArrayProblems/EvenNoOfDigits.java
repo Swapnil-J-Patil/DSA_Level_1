@@ -17,6 +17,9 @@ public class EvenNoOfDigits {
     }
     public static int findNumbers(int[] nums) {
         int count=0;
+        int temp=(int) (Math.log10(nums[4]) + 1);
+        System.out.println("No of digits: "+ temp);
+
         for(int i: nums)
         {
            if((int) (Math.log10(i) +1) % 2 ==0)

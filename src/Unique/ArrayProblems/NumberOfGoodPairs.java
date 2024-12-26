@@ -16,9 +16,10 @@ public class NumberOfGoodPairs {
     }
 
     public static int numIdenticalPairs(int[] arr) {
-        int ans = 0, count[] = new int[101]; //count will have {0,0,0,0, .....0} and we will keep on updating it to get no of occurrences of each element
+        int ans = 0;
+        int[] count = new int[101]; //count will have {0,0,0,0, .....0} and we will keep on updating it to get no of occurrences of each element
         for (int a : arr) {
-            ans = ans + count[a];
+            ans += count[a];
             count[a]++;
         }
         return ans;
