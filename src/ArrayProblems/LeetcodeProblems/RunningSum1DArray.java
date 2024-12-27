@@ -1,30 +1,34 @@
 package ArrayProblems.LeetcodeProblems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-//1480. Running Sum of 1d Array
-/*
-Input: nums = [1,2,3,4]
-        Output: [1,3,6,10]
-        Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].*/
+/*Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+        Output: [0,4,1,3,2]
+        Explanation:
+        nums       index     target
+        0            0        [0]
+        1            1        [0,1]
+        2            2        [0,1,2]
+        3            2        [0,1,3,2]
+        4            1        [0,4,1,3,2]*/
 public class RunningSum1DArray {
 
     public static void main(String[] args) {
-        int[] arr={1,2,3,4,5};
-        System.out.println(Arrays.toString(sum(arr)));
+        int[] arr={0,1,2,3,4};
+        int[] index={0,1,2,2,1};
+        System.out.println(Arrays.toString(createTargetArray(arr,index)));
     }
-
-    static int[] sum(int[] arr)
-    {
-        if(arr.length==0 || arr.length==1)
-        {
-            return arr;
+    public static int[] createTargetArray(int[] nums, int[] index) {
+       List<Integer> ans=new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            ans.add(index[i],nums[i]);
         }
-        for (int i = 1; i < arr.length; i++) {
-            int sum=arr[i-1]+arr[i];
-            arr[i]=sum;
+        for (int i = 0; i < ans.size(); i++) {
+            nums[i]= ans.get(i);
         }
-        return arr;
+        return nums;
     }
 }
 

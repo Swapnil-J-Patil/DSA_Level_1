@@ -1,37 +1,38 @@
-//1920. Build Array from Permutation
 
+//1431. Kids With the Greatest Number of Candies
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-//1365. How Many Numbers Are Smaller Than the Current
+//1480. Running Sum of 1d Array
+/*
+Input: nums = [1,2,3,4]
+        Output: [1,3,6,10]
+        Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].*/
 
-/*Input: nums = [8,1,2,2,3]
-        Output: [4,0,1,1,3]
-        Explanation:
-        For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).
-        For nums[1]=1 does not exist any smaller number than it.
-        For nums[2]=2 there exist one smaller number than it (1).
-        For nums[3]=2 there exist one smaller number than it (1).
-        For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).*/
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr={8,1,2,2,3};
-        System.out.println(Arrays.toString(smallerNums(arr)));
+        System.out.println(isPrime(4));
     }
-    public static int[] smallerNums(int[] arr)
+
+    static boolean isPrime(int num)
     {
-        int[] count=new int[101];
-        int[] ans=new int[arr.length];
-        for (int i: arr)
+        if(num==2)
         {
-            count[i]++;
+            return true;
         }
-        for (int i = 1; i < count.length; i++) {
-            count[i]+=count[i-1];
+        int div=2;
+        while (div*div < num)
+        {
+            if(num%div ==0)
+            {
+                return false;
+            }
+            div++;
         }
-        for (int i = 0; i < arr.length; i++) {
-            ans[i]=arr[i]==0? 0: count[arr[i]-1];
-        }
-        return ans;
+        return div*div>=num;
     }
+
 }

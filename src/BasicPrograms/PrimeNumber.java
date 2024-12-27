@@ -20,6 +20,6 @@ public class PrimeNumber {
             div++;
         }
 
-        return div*div > num; //After loop ends check if the div square is greater than the number
+        return div*div >= num; //After loop ends check if the div square is greater than the number
     }
 }

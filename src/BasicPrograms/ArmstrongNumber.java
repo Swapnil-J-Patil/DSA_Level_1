@@ -11,8 +11,8 @@ public class ArmstrongNumber {
         while (num>0)
         {
             int rem=num%10;
-            sum= sum + rem*rem*rem;
-            num=num/10;
+            sum+=rem*rem*rem;
+            num/=10;
         }
         return original==sum;
     }
