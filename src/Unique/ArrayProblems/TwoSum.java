@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems;
+package Unique.ArrayProblems;
 //1. Two Sum
 import java.util.*;
 
