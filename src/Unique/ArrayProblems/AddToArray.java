@@ -12,7 +12,7 @@ Explanation: 1200 + 34 = 1234*/
 public class AddToArray {
     public static void main(String[] args) {
         int[] arr={1,2,0,0};
-        System.out.println(addToArrayForm(arr,34));
+        //System.out.println(addToArrayForm(arr,34));
         System.out.println(addToArrayOptimized(arr,39));
 
     }
@@ -36,7 +36,7 @@ public class AddToArray {
         return ans;
     }
 
-    public static List<Integer> addToArrayForm(int[] num, int k) {
+    /*public static List<Integer> addToArrayForm(int[] num, int k) {
         int power=0;
         double a=0;
         for (int i = num.length-1; i >=0; i--) {
@@ -52,5 +52,5 @@ public class AddToArray {
             ans=ans/10;
         }
         return sol;
-    }
+    }*/
 }
