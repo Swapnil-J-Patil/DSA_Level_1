@@ -18,7 +18,7 @@ public class UniqueNumSumUpToZero {
             res[i-1]+=i;
             sum+=res[i-1];
         }
-        res[n-1]= -1 * (sum + 0);//Replace 0 with the sum you want.
+        res[n-1]= -1 * (sum + 0);//Replace 0 with the sum you want.e.g 21
         return res;
     }
 
