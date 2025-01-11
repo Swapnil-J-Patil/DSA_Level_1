@@ -9,13 +9,13 @@ Input: accounts = [[1,2,3],[3,2,1]]
         2nd customer has wealth = 3 + 2 + 1 = 6
         Both customers are considered the richest with a wealth of 6 each, so return 6.*/
 public class RichestCustomerWealth {
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         int[][] arr={
                 {1,2,3,7},
                 {3,2,1,5}
         };
         System.out.println(maxWealth(arr));
-    }
+    }*/
     static int maxWealth(int[][] arr)
     {
         int max=Integer.MIN_VALUE;
