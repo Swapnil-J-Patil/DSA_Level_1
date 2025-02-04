@@ -1,1 +1,1 @@
-Explore DSA concepts in java.
+Dive into simplified and understandable DSA learning repository. 
