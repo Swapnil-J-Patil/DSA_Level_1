@@ -1,5 +1,7 @@
 package ArrayProblems.LeetcodeProblems;
 
+import java.util.Arrays;
+
 //26. Remove Duplicates from Sorted Array
 /*Example 1:
 
@@ -23,7 +25,7 @@ public class RemoveDuplicatesFromSortedArray {
         int j = 1;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] != nums[i - 1]) {
-                nums[j] = nums[i];
+                //nums[j] = nums[i];
                 j++;
             }
         }
