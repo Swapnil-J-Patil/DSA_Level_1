@@ -1,44 +1,23 @@
-
-//1431. Kids With the Greatest Number of Candies
-
 import java.util.*;
+
+
+/*Input: n = 5
+        Output: [-7,-1,1,3,4]
+        Explanation: These arrays also are accepted [-5,-1,1,2,3] , [-3,-1,2,-2,4].*/
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr={1,2,3};
+        System.out.println(Arrays.toString(sumZero(5)));
     }
-    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-        int index=0;
-        int count=0;
-        if(items.size()==0)
-        {
-            return count;
+    public static int[] sumZero(int n) {
+        int[] ans=new int[n];
+        int sum=0;
+        for (int i = 1; i < n; i++) {
+            ans[i]=i;
+            sum+=ans[i];
         }
-        switch (ruleKey)
-        {
-            case("type"):
-            {
-                index=0;
-                break;
-            }
-            case("color"):
-            {
-                index=1;
-                break;
-            }
-            case("name"):
-            {
-                index=2;
-                break;
-            }
-        }
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).get(index).matches(ruleValue))
-            {
-                count++;
-            }
-        }
-        return count;
+        int firstDigit= -1 * sum;
+        ans[0]=firstDigit;
+        return ans;
     }
-
 }
