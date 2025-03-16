@@ -7,25 +7,18 @@ Explanation: 1200 + 34 = 1234*/
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr={1,2,0,0};
-        //System.out.println(addToArrayForm(arr,34));
-        System.out.println(addToArrayOptimized(arr,39));
-
+        int[] arr= {12,345,2,6,7896};
+        System.out.println(findNumbers(arr));
     }
-
-    public static List<Integer> addToArrayOptimized(int[] num, int k)
-    {
-        LinkedList<Integer> ans=new LinkedList<>();
-        int i=num.length-1;
-        while (i>=0 || k >0)
-        {
-            if(i>=0)
-            {
-                k+=num[i--];
-            }
-            ans.addFirst(k%10);
-            k/=10;
+    public static int findNumbers(int[] nums) {
+       int count=0;
+        for (int i : nums) {
+           int digits= (int) (Math.log10(i) +1);
+           if(digits % 2 !=0)
+           {
+               count++;
+           }
         }
-        return ans;
+        return count;
     }
 }
