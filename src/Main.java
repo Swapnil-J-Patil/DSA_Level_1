@@ -1,30 +1,23 @@
 import java.util.*;
 
 
-
-/*Input: num = [1,2,0,0], k = 34
-Output: [1,2,3,4]
-Explanation: 1200 + 34 = 1234*/
+/*Input: n = 5
+        Output: [-7,-1,1,3,4]
+        Explanation: These arrays also are accepted [-5,-1,1,2,3] , [-3,-1,2,-2,4].*/
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr={1,2,0,0};
-        //System.out.println(addToArrayForm(arr,34));
-        System.out.println(addToArrayOptimized(arr,39));
+        System.out.println(Arrays.toString(sumZero(5)));
     }
-    public static List<Integer> addToArrayOptimized(int[] num, int k)
-    {
-        List<Integer> ans=new LinkedList<>();
-        int i= num.length-1;
-        while (i >= 0 || k>0)
-        {
-            if(i>=0)
-            {
-                k+=num[i--];
-            }
-            ans.addFirst(k%10);
-            k/=10;
+    public static int[] sumZero(int n) {
+        int[] ans=new int[n];
+        int sum=0;
+        for (int i = 1; i < n; i++) {
+            ans[i]=i;
+            sum+=ans[i];
         }
+        int firstDigit= -1 * sum;
+        ans[0]=firstDigit;
         return ans;
     }
 }
