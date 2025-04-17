@@ -17,7 +17,7 @@ public class ShuffleTheArray {
     static int[] shuffleArray(int[] arr,int n)
     {
         int[] ans=new int[arr.length];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < ans.length/2; i++) {
 
             ans[2*i]=arr[i];
             ans[2*i+1]=arr[i+n];
