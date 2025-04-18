@@ -1,1 +1,1 @@
-Dive into simplified and understandable DSA learning repository. 
+Dive into simplified and understandable DSA learning repository in Java. 
