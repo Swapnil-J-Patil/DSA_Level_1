@@ -19,38 +19,29 @@ public class AddToArray {
 
     public static List<Integer> addToArrayOptimized(int[] num, int k)
     {
+        //Create a LinkedList with name as ans
         LinkedList<Integer> ans=new LinkedList<>();
+
+        //create a variable i and initialize it with last index of array (num.length -1)
         int i=num.length -1;
 
+        //Run a while loop till (i>=0 || k>0)
         while(i>=0 || k>0)
         {
             //To check if the current index is less than 0 or not
-            //Adding the digits to k and saving it in LinkedList (faster than normal list)
             if(i>=0)
             {
                 k+=num[i--];
             }
+
+            //Add remainder of k with 10 to the start of the LL ans with .addFirst(k%10)
             ans.addFirst(k%10);
+
+            //Divide k by 10 and store it back to k
             k/=10;
         }
+
+        //return the ans LL
         return ans;
     }
-
-    /*public static List<Integer> addToArrayForm(int[] num, int k) {
-        int power=0;
-        double a=0;
-        for (int i = num.length-1; i >=0; i--) {
-            a+= num[i]*Math.pow(10,power);
-            power++;
-        }
-        long ans= (long)a + k;
-        List<Integer> sol=new ArrayList<>();
-        while (ans>0)
-        {
-            long rem=ans%10;
-            sol.addFirst((int)rem);
-            ans=ans/10;
-        }
-        return sol;
-    }*/
 }
