@@ -16,7 +16,11 @@ public class EvenNoOfDigits {
         System.out.println(findNumbers(arr));
     }
     public static int findNumbers(int[] nums) {
+        //initialize the counter to 0
         int count=0;
+
+        //To get no of digits use below formula
+
         int temp=(int) (Math.log10(nums[4]) + 1);
         System.out.println("No of digits: "+ temp);
 
