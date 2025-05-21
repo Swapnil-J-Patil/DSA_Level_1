@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SecondLargestNum {
     public static void main(String[] args) {
-        int[] arr= {10, 10, 10};
+        int[] arr= {12, 35, 1, 10, 34, 1};
         System.out.println(secondLarge(arr));
     }
     static int secondLarge(int[] arr)
