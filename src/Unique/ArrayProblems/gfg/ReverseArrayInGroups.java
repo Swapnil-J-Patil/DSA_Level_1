@@ -6,9 +6,31 @@ public class ReverseArrayInGroups {
     public static void main(String[] args) {
 
         int[] arr={1, 2, 3, 4, 5, 6, 7, 8};
-        System.out.println(Arrays.toString(reverseArray(arr,10)));
+        System.out.println(Arrays.toString(reverseSubArrays(arr,3)));
     }
 
+    static int[] reverseSubArrays(int[] arr, int k)
+    {
+        int n= arr.length;
+        //Here incrementing the i value by kth times
+        for (int i = 0; i < n; i+=k) {
+
+            //Here initializing end with min value of end with minimum of i+k -1 and n-1 for out of bound scenario
+            int start= i;
+            int end= Math.min(i+k - 1, n-1);
+
+            while (start<end)
+            {
+                int temp=arr[start];
+                arr[start]=arr[end];
+                arr[end]=temp;
+
+                start++;
+                end--;
+            }
+        }
+        return arr;
+    }
     static int[] reverseArray(int[] arr, int k) {
         int[] ans = new int[arr.length];
         int[] temp = new int[k];
