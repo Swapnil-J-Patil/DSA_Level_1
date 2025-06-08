@@ -8,14 +8,14 @@ public class SearchInRotatedSortedArray {
     }
     static int search(int[] arr,int target)
     {
-        int peak=peakOfArray(arr);
-        int left=binarySearch(arr,target,0,peak);
+        int pivot=pivotOfArray(arr);
+        int left=binarySearch(arr,target,0,pivot);
         if(left!=-1)
         {
             return left;
         }
 
-        return binarySearch(arr,target,peak+1,arr.length-1);
+        return binarySearch(arr,target,pivot+1,arr.length-1);
 
     }
     static int binarySearch(int[] arr, int target, int start, int end)
@@ -36,7 +36,7 @@ public class SearchInRotatedSortedArray {
         }
         return -1;
     }
-    static int peakOfArray(int[] arr)
+    static int pivotOfArray(int[] arr)
     {
         int start=0;
         int end=arr.length-1;
@@ -47,7 +47,7 @@ public class SearchInRotatedSortedArray {
 
             //Case1: 0,5,6,1,2 (mid: 6) mid > mid+1
             //Here we already got the largest element so return it
-            //suppose mid+1 exceeds the size of the array
+            //To prevent mid+1 exceeding the size of the array (mid < end)
             if(mid<end && arr[mid]>arr[mid+1])
             {
                 return mid;
@@ -55,7 +55,7 @@ public class SearchInRotatedSortedArray {
 
             //Case2: 2,3,4,5,1 (mid: 4) mid < mid -1
             //Here we already got the largest element so return it
-            //suppose there is no element for mid -1
+            //To prevent mid-1 exceeding the size of the array (mid > start)
             if( mid > start && arr[mid] < arr[mid-1])
             {
                 return mid-1;
