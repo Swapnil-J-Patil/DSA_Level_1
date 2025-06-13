@@ -4,7 +4,7 @@ package ArrayProblems.BinarySearch;
 public class SmallestLetterGTET {
     public static void main(String[] args) {
         char[] arr={'c','f','j'};
-        System.out.println(smallestLetter(arr,'k'));
+        System.out.println(smallestLetter(arr,'f'));
     }
     static char smallestLetter(char[] arr, char target)
     {

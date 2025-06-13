@@ -32,6 +32,7 @@ public class FindInMountainArray {
             {
                 start=mid+1;
             }
+            //this could be the peak but let's see the left side too
             else {
                 end=mid;
             }
