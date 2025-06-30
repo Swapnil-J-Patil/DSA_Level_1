@@ -27,6 +27,7 @@ public class TwoSum {
         return new int[] {1,2};
     }
 
+
     public static int[] twoSum(int[] nums, int target) {
         int slow=0;
         int fast=1;
