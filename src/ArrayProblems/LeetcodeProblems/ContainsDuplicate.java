@@ -3,6 +3,7 @@ package ArrayProblems.LeetcodeProblems;
 import java.util.HashMap;
 import java.util.Set;
 
+//https://leetcode.com/problems/contains-duplicate/description/
 public class ContainsDuplicate {
     public static void main(String[] args) {
 
