@@ -13,6 +13,7 @@ public class MissingNum {
 
             //As the range is from [0,n] we are not doing -1
             int correctIndex=arr[index];
+            //Skip the missing number
             if(arr[index]< arr.length && arr[index]!=arr[correctIndex])
             {
                 swap(arr,index,correctIndex);
@@ -22,6 +23,7 @@ public class MissingNum {
             }
         }
 
+        //Now check if there is any number who is not at current index
         for (int i = 0; i < arr.length; i++) {
             if(i!=arr[i])
             {
