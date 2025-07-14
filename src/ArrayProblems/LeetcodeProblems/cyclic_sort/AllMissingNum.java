@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems;
+package ArrayProblems.LeetcodeProblems.cyclic_sort;
 
 import java.util.ArrayList;
 import java.util.List;

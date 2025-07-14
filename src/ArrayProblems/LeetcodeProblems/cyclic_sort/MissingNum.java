@@ -1,4 +1,4 @@
-package ArrayProblems.LeetcodeProblems;
+package ArrayProblems.LeetcodeProblems.cyclic_sort;
 
 //https://leetcode.com/problems/missing-number/description/
 public class MissingNum {
