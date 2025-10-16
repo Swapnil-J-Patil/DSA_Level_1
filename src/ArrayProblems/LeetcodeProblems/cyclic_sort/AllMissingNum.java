@@ -15,7 +15,7 @@ public class AllMissingNum {
         while (index< nums.length)
         {
             int correctIndex=nums[index]-1;
-            if(nums[index]!=correctIndex && index< nums.length && nums[correctIndex]!=nums[index])
+            if(nums[index]!=correctIndex  && nums[correctIndex]!=nums[index] && index< nums.length)
             {
                 swap(nums,index,correctIndex);
             }

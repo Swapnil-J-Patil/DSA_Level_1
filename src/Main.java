@@ -7,38 +7,28 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr={1,2,3,4,5,6,7,8,9,10};
-        System.out.println(binarySearch(arr,8,0,1));
+        int[] arr={2, 1, 5, 3, 1, 0, 4};
+        System.out.println(trappedWater(arr));
     }
-
-    static int binarySearch(int[] arr, int target, int start, int end)
+    public static int trappedWater(int[] arr)
     {
+        int[] left=new int[arr.length];
+        int[] right= new int[arr.length];
+        int res=0;
 
-        while (start<=end)
-        {
-            int mid=start +(end -start)/2;
-
-            if(start==end && target>arr[end])
-            {
-                end=end +(end -start +1)*2;
-            }
-            else if(start==end){
-                break;
-            }
-
-            if(target < arr[mid])
-            {
-                    end=mid-1;
-            }
-            else if(target>arr[mid])
-            {
-                    start=mid+1;
-            }
-            else
-            {
-                return mid;
-            }
+        left[0]=arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            left[i]=Math.max(left[i-1],arr[i]);
         }
-        return -1;
+
+        right[right.length-1]= arr[arr.length-1];
+        for (int j = right.length-2; j >=0 ; j--) {
+            right[j]=Math.max(right[j+1],arr[j]);
+        }
+
+        for (int i = 0; i < arr.length ; i++) {
+            res+=Math.min(left[i],right[i]) - arr[i];
+        }
+        return res;
     }
 }

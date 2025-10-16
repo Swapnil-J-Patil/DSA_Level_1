@@ -20,7 +20,7 @@ public class PeakOfMountainArray {
                 //We are in the des part of the array
                 //But we don't know whether this is the largest element that's why end=mid
                 //mid is 1,2,3,4,3,2,1,0 here mid will be 3 but that not the peak
-                end=mid;
+                end=mid-1;
             }
             else {
                 //else we are on the asc part of the array
