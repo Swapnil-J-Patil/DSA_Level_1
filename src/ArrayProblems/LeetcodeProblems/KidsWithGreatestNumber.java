@@ -6,8 +6,8 @@ import java.util.List;
 
 //1431. Kids With the Greatest Number of Candies
 
-/*Example 1:
-
+/*
+Example 1:
         Input: candies = [2,3,5,1,3], extraCandies = 3
         Output: [true,true,true,false,true]
         Explanation: If you give all extraCandies to:
@@ -15,7 +15,9 @@ import java.util.List;
         - Kid 2, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
         - Kid 3, they will have 5 + 3 = 8 candies, which is the greatest among the kids.
         - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
-        - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.*/
+        - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
+*/
+
 public class KidsWithGreatestNumber {
     public static void main(String[] args) {
 
@@ -24,6 +26,7 @@ public class KidsWithGreatestNumber {
         //System.out.println(Arrays.toString(arr));
         System.out.println(greatestNum(arr,3));
     }
+
     public static List<Boolean> greatestNum(int[] arr, int extra)
     {
         int max=getMaxElement(arr);
@@ -40,6 +43,7 @@ public class KidsWithGreatestNumber {
         }
         return ans;
     }
+
     public static int getMaxElement(int[] arr)
     {
         int max=arr[0];

@@ -21,5 +21,4 @@ public class UniqueNumSumUpToZero {
         res[n-1]= -1 * (sum + 0);//Replace 0 with the sum you want.e.g 21
         return res;
     }
-
 }

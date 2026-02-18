@@ -15,6 +15,7 @@ public class ValidAnagram {
         for (char c: s.toCharArray()) {
            freq[c-'a']++;
         }
+
         //Decreasing the count at given index
         for (char c: t.toCharArray()) {
             freq[c-'a']--;

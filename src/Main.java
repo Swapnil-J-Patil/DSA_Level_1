@@ -7,24 +7,36 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr={2,7,11,15};
-        //System.out.println(Arrays.toString(twoSum(arr,50)));
-        System.out.println(Arrays.toString(sum(arr,17)));
+        int[] arr = {2, 3, 5, 1, 3};
+        System.out.println(greatestNum(arr, 3));
     }
 
-    public static int[] sum(int[] arr,int target)
+    public static List<Boolean> greatestNum(int[] arr, int extra)
     {
-        Map <Integer,Integer> map=new HashMap<>();
-        for (int i=0;i<arr.length;i++)
-        {
-            if(map.containsKey(target - arr[i]))
+        int max=getMax(arr);
+        List<Boolean> sol = new ArrayList<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] + extra >= max)
             {
-                return new int[]{map.get(target -arr[i]),i};
+                sol.add(i,true);
             }
-            map.put(arr[i],i);
+            else
+            {
+                sol.add(i,false);
+            }
         }
-        return new int[] {-1,-1};
+        return sol;
     }
-
-
+    public static int getMax(int[] arr)
+    {
+        int max=arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if(max > arr[i])
+            {
+                max=arr[i];
+            }
+        }
+        return max;
+    }
 }

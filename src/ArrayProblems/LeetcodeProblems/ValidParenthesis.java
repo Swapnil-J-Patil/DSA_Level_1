@@ -26,12 +26,14 @@ public class ValidParenthesis {
                     {
                         return false;
                     }
-                } else if (c==']') {
+                }
+                else if (c==']') {
                     if(stack.isEmpty() || stack.pop()!='[')
                     {
                         return false;
                     }
-                } else if (c=='}') {
+                }
+                else if (c=='}') {
                     if(stack.isEmpty() || stack.pop()!='{')
                     {
                         return false;

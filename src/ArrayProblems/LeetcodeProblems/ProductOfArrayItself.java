@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class ProductOfArrayItself {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
+        int[] arr = {1, 2, 3, 4,5,6};
         System.out.println(Arrays.toString(productExceptSelf(arr))); // [24, 12, 8, 6]
     }
 

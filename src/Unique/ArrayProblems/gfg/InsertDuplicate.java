@@ -20,7 +20,6 @@ public class InsertDuplicate {
             if(arr[arrIndex]!=k)
             {
                 ans[ansIndex++]=arr[arrIndex++];
-
             }
             else
             {
@@ -29,7 +28,6 @@ public class InsertDuplicate {
                 {
                     ans[ansIndex++]=arr[arrIndex++];
                 }
-
             }
         }
         return ans;

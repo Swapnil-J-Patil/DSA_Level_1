@@ -18,7 +18,6 @@ public class FirstAndLastPos {
         ans[1]=lastOccurrence;
 
         return ans;
-
     }
     static int binarySearch(int[] arr,int target,boolean isStartIndex )
     {

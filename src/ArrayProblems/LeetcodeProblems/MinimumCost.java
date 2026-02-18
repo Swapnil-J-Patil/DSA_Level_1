@@ -27,7 +27,8 @@ public class MinimumCost {
         for (int pos : position) {
             if (pos % 2 == 0) {
                 evenCount++;
-            } else {
+            }
+            else {
                 oddCount++;
             }
         }

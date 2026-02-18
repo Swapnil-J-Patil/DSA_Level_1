@@ -11,21 +11,29 @@ public class LongestConsecutiveSeq {
         System.out.println(longestConsecutive(arr));
     }
     public static int longestConsecutive(int[] nums) {
-       Set<Integer> set= new HashSet<>();
-       int ans=0;
-       for (int i: nums)
-       {
-           int y=1;
-           if(!set.contains(i-1))
-           {
-               y=i+1;
-               while (i==y)
-               {
-                   y+=1;
-               }
-               ans=Math.max(ans,y-i);
-           }
-       }
-       return ans;
+        if(nums.length==0)
+        {
+            return 0;
+        }
+        Arrays.sort(nums);
+        int count=1;
+        int res = Integer.MIN_VALUE;
+
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i-1] == nums[i]){
+                continue;
+            }
+            else if(nums[i]==nums[i-1]+1)
+            {
+                count++;
+            }
+            else {
+                res = Math.max(res, count);
+                count=1;
+            }
+        }
+        res = Math.max(res, count);
+        return res;
     }
+
 }
