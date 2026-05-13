@@ -5,6 +5,7 @@ import java.util.*;
 /*Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].*/
+
 public class TwoSum {
     public static void main(String[] args) {
     int[] arr={2,7,11,15};
@@ -26,7 +27,6 @@ public class TwoSum {
         }
         return new int[] {1,2};
     }
-
 
     public static int[] twoSum(int[] nums, int target) {
         int slow=0;

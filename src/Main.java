@@ -7,36 +7,26 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, 1, 3};
-        System.out.println(greatestNum(arr, 3));
+        System.out.println(isPali(1212));
     }
 
-    public static List<Boolean> greatestNum(int[] arr, int extra)
+    public static boolean isPali(int num)
     {
-        int max=getMax(arr);
-        List<Boolean> sol = new ArrayList<>();
+        int number=num;
+        int ans=0;
 
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] + extra >= max)
-            {
-                sol.add(i,true);
-            }
-            else
-            {
-                sol.add(i,false);
-            }
+        while (num > 0)
+        {
+            int rem = num % 10;
+            ans= ans * 10 + rem;
+            num/=10;
         }
-        return sol;
-    }
-    public static int getMax(int[] arr)
-    {
-        int max=arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if(max > arr[i])
-            {
-                max=arr[i];
-            }
+
+        if(number == ans)
+        {
+            return true;
         }
-        return max;
+        return false;
     }
+
 }
