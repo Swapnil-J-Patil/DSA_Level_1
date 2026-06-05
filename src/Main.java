@@ -7,26 +7,38 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(isPali(1212));
-    }
 
-    public static boolean isPali(int num)
+        System.out.println(isAnagram("cas", "tac"));
+
+    }
+    public static boolean isAnagram(String s, String t)
     {
-        int number=num;
-        int ans=0;
-
-        while (num > 0)
+        if(s.length() != t.length())
         {
-            int rem = num % 10;
-            ans= ans * 10 + rem;
-            num/=10;
+            return false;
         }
 
-        if(number == ans)
+        int[] freq = new int[26];
+
+        for (char c: s.toCharArray())
         {
-            return true;
+            freq[ c - 'a']++;
         }
-        return false;
+
+        for (char c: t.toCharArray())
+        {
+            freq[ c - 'a']--;
+        }
+
+        for (int i = 0; i < freq.length; i++) {
+
+            if(freq[i] != 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
+
 
 }
